@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>UGANDA POPULATION</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    <!--<link rel="stylesheet" href="app.min.css">-->
+    <script src="Charts/canvasjs.min.js"></script>
+    <script src="Charts/jquery/jquery.min.js"></script>
+    <style>
+        /* TODO */
+    </style>
+</head>
+
+<body>
+    <div class="app-page" data-page="home">
+        <div class="app-topbar">
+            <!--<div class="app-title">Send Quick Text Message</div>-->
+            <div class="app-title">UGANDA POPULATION</div>
+        </div>
+        <div class="app-content">
+
+            <br />
+            <i>
+                Visual representation of the population trend of Uganda from 1955 to 2017 as per http://www.worldometers.info/world-population/uganda-population/
+            </i>
+            <br />
+            <br />
+            <div id="graphArea"></div>
+            <div style="min-height:100%"></div>
+            <script type="text/javascript">
+                var chart = new CanvasJS.Chart("graphArea", {
+                    theme: "theme2",//theme1
+                    title: {
+                        text: ""
+                    },
+                    animationEnabled: false,   // change to true
+                    data: [
+                    {
+                        // Change type to "bar", "splineArea", "area", "spline", "pie", "column"etc.
+                        type: "pie",
+                        dataPoints: [
+                    { label: "2017", y: "41652938" },
+                    { label: "2016", y: "40322768" },
+                    { label: "2015", y: "39032383" },
+                    { label: "2010", y: "33149417" },
+                    { label: "2005", y: "28042413" },
+                    { label: "2000", y: "23757636" },
+                    { label: "1995", y: "20412967" },
+                    { label: "1990", y: "17384369" },
+                    { label: "1985", y: "14631089" },
+                    { label: "1980", y: "12547754" },
+                    { label: "1975", y: "10827071" },
+                    { label: "1970", y: "9446024" },
+                    { label: "1965", y: "8014376" },
+                    { label: "1960", y: "6788211" },
+                    { label: "1955", y: "5898834" }
+                        ]
+                    }
+                    ]
+                });
+                chart.render();
+            </script>
+            <img src="popImages/ug.png" style="width:100%;" />
+
+
+        </div>
+    </div>
+
+    <script src="zepto.js"></script>
+    <script src="app.min.js"></script>
+</body>
+</html>
